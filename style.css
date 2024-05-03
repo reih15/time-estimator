@@ -1,0 +1,150 @@
+input {
+  font-size: medium;
+}
+input.number-input {
+  width: 5em;
+  max-width: 100%;
+}
+
+#url {
+  font-size: small;
+  width: 350px;
+  max-width: 100%;
+}
+
+table {
+  min-width: 440px;
+}
+
+.clock-container {
+  display: flex;
+  padding-top: 10px;
+}
+.clock {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border: 5px solid #000;
+  border-radius: 50%;
+  --background: white;
+  background: var(--background);
+}
+.clock.clock-now {
+  --background: #ffffcc;
+}
+.clock.clock-estimated {
+  --background: #ccffff;
+}
+.line-for-mark {
+  position: absolute;
+  --width: 4px;
+  --height: 99%;
+  width: var(--width);
+  height: var(--height);
+  top: calc((100% - var(--height)) / 2);
+  left: calc(50% - var(--width) / 2);
+  background: #000;
+  transform-origin: center;
+  transform: rotate(0deg);
+}
+.line-for-mark.line-1 {
+  transform: rotate(0deg);
+}
+.line-for-mark.line-2 {
+  transform: rotate(30deg);
+}
+.line-for-mark.line-3 {
+  transform: rotate(60deg);
+}
+.line-for-mark.line-4 {
+  transform: rotate(90deg);
+}
+.line-for-mark.line-5 {
+  transform: rotate(120deg);
+}
+.line-for-mark.line-6 {
+  transform: rotate(150deg);
+}
+.circle-for-mark {
+  position: absolute;
+  --diameter: 94%;
+  width: var(--diameter);
+  height: var(--diameter);
+  top: calc(50% - var(--diameter) / 2);
+  left: calc(50% - var(--diameter) / 2);
+  border-radius: 50%;
+  background: var(--background);
+}
+.clock-number {
+  position: absolute;
+  font-size: 22px;
+}
+.clock-number.clock-12 {
+  top: 2%;
+  left: 43.5%;
+}
+.clock-number.clock-3 {
+  position: absolute;
+  top: 43%;
+  left: 88.5%;
+}
+.clock-number.clock-6 {
+  position: absolute;
+  top: 83%;
+  left: 46.5%;
+}
+.clock-number.clock-9 {
+  position: absolute;
+  top: 42%;
+  left: 4.5%;
+}
+.hand {
+  position: absolute;
+  --width: 2px;
+  --height: 45%;
+  width: var(--width);
+  height: var(--height);
+  top: calc(50% - var(--height));
+  left: calc(50% - var(--width) / 2);
+  background: #000;
+  transform-origin: bottom;
+  transform: rotate(0deg);
+}
+.hand.hour {
+  --width: 6px;
+  --height: 30%;
+}
+.hand.minute {
+  --width: 3px;
+}
+.hand.second {
+  --height: 55%;
+  --top: 5%;
+  top: var(--top);
+  --len50: calc(50%);
+  transform-origin: 50% 81.8%;
+  background: red;
+}
+.center-dot {
+  position: absolute;
+  --diameter: 8px;
+  width: var(--diameter);
+  height: var(--diameter);
+  top: calc(50% - var(--diameter) / 2);
+  left: calc(50% - var(--diameter) / 2);
+  border-radius: 50%;
+  background: black;
+}
+.center-dot.red {
+  background: red;
+}
+.circle-for-background {
+  position: absolute;
+  --diameter: 100%;
+  width: var(--diameter);
+  height: var(--diameter);
+  top: calc(50% - var(--diameter) / 2);
+  left: calc(50% - var(--diameter) / 2);
+  border-radius: 50%;
+  background: #ccffff;
+}

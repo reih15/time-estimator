@@ -43,9 +43,12 @@ function init() {
  * @param {Date} date
  */
 function setTime(date) {
+  const year = date.getFullYear();
+  const monthString = zeroPad2(date.getMonth() + 1);
+  const dateString = zeroPad2(date.getDate());
   const hoursString = zeroPad2(date.getHours());
   const minutesString = zeroPad2(date.getMinutes());
-  const s = `${date.toISOString().split("T")[0]}T${hoursString}:${minutesString}`;
+  const s = `${year}-${monthString}-${dateString}T${hoursString}:${minutesString}`;
   document.getElementById("start-time-input").value = s;
 }
 function setCurrentTime() {
